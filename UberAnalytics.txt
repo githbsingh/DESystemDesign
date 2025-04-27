@@ -1,0 +1,31 @@
+- Data Engineer System Design vs General System Design 
+    — they are related but different in priorities.
+
+Genaral System Design 
+
+Goal:
+Design scalable, maintainable systems for features like user login, notification service, payment processing, etc.
+
+Focus Areas:
+
+1. Request/response lifecycle
+
+2. High availability
+
+3. Load balancing
+
+4. Latency optimization
+
+5. Stateless services
+
+6. Microservices or monolith choices
+
+7. API design (REST, GraphQL)
+
+8. Caching (Redis, Memcached)
+
+9. Scalability (horizontal/vertical)
+
+10. Resiliency (circuit breakers, retries)
+
+11. Security (auth, encryption)
