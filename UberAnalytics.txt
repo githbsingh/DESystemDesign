@@ -63,3 +63,20 @@ Focus Areas:
 
 Typical Example:
 Design a system to collect millions of users’ clickstream data, store it, process it into daily reports, and serve it for analytics teams in BigQuery or Snowflake.
+
+
+Problem Statement:
+Design a Real-time Uber Trip Analytics System
+Imagine Uber wants a dashboard that shows:
+
+a. Number of ongoing trips
+b. Average trip duration
+c. Popular pickup/drop-off locations
+d. City-level daily trip counts
+
+Note: The dashboard should update every few seconds.
+
+
+Requirements:
+- Real-time or near real-time data
+= Handle millions of trips daily
