@@ -29,3 +29,37 @@ Focus Areas:
 10. Resiliency (circuit breakers, retries)
 
 11. Security (auth, encryption)
+
+
+DATA Engineering System Design 
+Goal:
+Design reliable, scalable systems to collect, store, process, and serve large volumes of data.
+
+Focus Areas:
+
+1. Data ingestion (streaming vs batch)
+
+2. Data transformation (ETL/ELT pipelines)
+
+3. Storage systems (Data lakes, Data warehouses)
+   DATA Lake is used to store unstructured data (Ex- Google Cloud Storage) 
+   DATA Warehouse is used to store structured data (Ex- Google BigQuery)
+
+4. File formats (Parquet, ORC, Avro, JSON)
+
+5. Workflow orchestration (Airflow, Dagster)
+
+6. Data partitioning, bucketing
+
+7. Data schema evolution
+
+8. Consistency vs eventual consistency
+
+9. Query performance optimization (indexes, denormalization)
+
+10. Cost efficiency (especially cloud storage and compute)
+
+11. Data governance (quality, lineage, security, catalog)
+
+Typical Example:
+Design a system to collect millions of users’ clickstream data, store it, process it into daily reports, and serve it for analytics teams in BigQuery or Snowflake.
