@@ -79,4 +79,38 @@ Note: The dashboard should update every few seconds.
 
 Requirements:
 - Real-time or near real-time data
-= Handle millions of trips daily
+- Handle millions of trips daily
+- cost efficient
+- Support historical querying for past days
+- High availability and Scalability
+
+High-levl design components:-
+1. Data Ingestion
+    - Trips start/stop events are captured from Uber Driver's mobile app
+    - Kafka Topics receive streamed events Pub/Sub in case of GCP 
+
+2. Stream Processing:
+    - Real-time processing system (eg. Apache Flink, Kafka Streams or Dataflow)
+    - Computes:
+        Ongoing Trip Counts 
+        Top N locations
+        Average Trip Duration 
+
+3. Storage Layers:
+    - Hot Storage (Real Time View)
+        - Redis or BigTable for instant dassboards
+    - Cold Storage(Historical analytics)
+        - Store raw trip events in BigQuery
+        - Partitioned by date events for increase query performance 
+
+4. Serving Layar:
+    - Real-Time dashboard pulls data from Redis/BigTable(Real-time view)
+    - Analysts and data scientists Query BigQuery for deeper historical analysis
+
+5. Orchestration: 
+    - Use Airflow to schedule batch jobs
+    - Retry failed streaming jobs immediately
+
+6. Monintoring:
+    - Alerts for lag in Kafka
+    - Alerts if data ingestion drops suddenly. 
