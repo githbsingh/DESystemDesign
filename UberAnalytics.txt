@@ -114,3 +114,11 @@ High-levl design components:-
 6. Monintoring:
     - Alerts for lag in Kafka
     - Alerts if data ingestion drops suddenly. 
+
+
+Why this design:
+1. Streaming + batch hybrid solution to balance cost and speed
+2. Kafka decouples producer and consumer cleanly
+3. Redis to provide live feed for dashboard
+4. BigQuery scales, cheap and fast for historical queries. 
+
